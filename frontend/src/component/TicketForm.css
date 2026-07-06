@@ -1,0 +1,264 @@
+/* ===================================
+   GLOBAL BACKGROUND
+=================================== */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(circle at top left, #1e293b 0%, transparent 35%),
+    radial-gradient(circle at bottom right, #0f172a 0%, transparent 40%),
+    #020617;
+
+  font-family: Inter, sans-serif;
+  color: #e2e8f0;
+}
+
+/* ===================================
+   FORM CARD
+=================================== */
+
+.ticket-form-card {
+  width: 100%;
+  max-width: 650px;
+
+  margin: 50px auto;
+  padding: 35px;
+
+  background: #111827;
+
+  border: 1px solid #1e293b;
+  border-radius: 24px;
+
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.45);
+
+  transition: all 0.3s ease;
+}
+
+.ticket-form-card:hover {
+  border-color: #334155;
+  transform: translateY(-4px);
+}
+
+/* ===================================
+   TITLE
+=================================== */
+
+.ticket-form-title {
+  margin: 0 0 30px;
+
+  text-align: center;
+
+  font-size: 2.2rem;
+  font-weight: 800;
+
+  color: #f8fafc;
+
+  letter-spacing: -1px;
+}
+
+/* ===================================
+   FORM
+=================================== */
+
+.ticket-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ===================================
+   LABELS
+=================================== */
+
+.form-row label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+/* ===================================
+   INPUTS & SELECTS
+=================================== */
+
+.form-row input,
+.form-row select {
+  width: 100%;
+
+  padding: 15px 18px;
+
+  background: #0f172a;
+
+  border: 1px solid #334155;
+  border-radius: 14px;
+
+  color: #f8fafc;
+  font-size: 1rem;
+
+  transition: all 0.25s ease;
+}
+
+.form-row input::placeholder {
+  color: #64748b;
+}
+
+/* Hover */
+
+.form-row input:hover,
+.form-row select:hover {
+  border-color: #475569;
+}
+
+/* Focus */
+
+.form-row input:focus,
+.form-row select:focus {
+  outline: none;
+
+  border-color: #3b82f6;
+
+  box-shadow:
+    0 0 0 3px rgba(59, 130, 246, 0.2);
+
+  background: #111827;
+}
+
+/* ===================================
+   SELECT
+=================================== */
+
+.form-row select {
+  cursor: pointer;
+}
+
+/* ===================================
+   BUTTON BASE
+=================================== */
+
+.button {
+  border: none;
+  cursor: pointer;
+
+  border-radius: 14px;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  transition: all 0.25s ease;
+}
+
+/* ===================================
+   PRIMARY BUTTON
+=================================== */
+
+.button-primary {
+  width: 100%;
+
+  padding: 16px;
+
+  background: #2563eb;
+  color: white;
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+.button-primary:hover {
+  background: #3b82f6;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 15px 35px rgba(37, 99, 235, 0.4);
+}
+
+.button-primary:active {
+  transform: scale(0.98);
+}
+
+/* ===================================
+   INPUT GROUP EFFECT
+=================================== */
+
+.form-row {
+  position: relative;
+}
+
+.form-row input,
+.form-row select {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===================================
+   ENTRY ANIMATION
+=================================== */
+
+.ticket-form-card {
+  animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================================
+   SCROLLBAR
+=================================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media (max-width: 768px) {
+  .ticket-form-card {
+    margin: 20px;
+    padding: 25px;
+  }
+
+  .ticket-form-title {
+    font-size: 1.8rem;
+  }
+
+  .form-row input,
+  .form-row select {
+    padding: 14px 16px;
+  }
+
+  .button-primary {
+    padding: 15px;
+  }
+}
